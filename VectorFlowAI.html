@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VectorFlow AI - Neural Network Training Optimization Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .product-section {
+            background: rgba(255, 255, 255, 0.95);
+            margin: 30px auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            overflow: hidden;
+            backdrop-filter: blur(20px);
+        }
+        
+        .product-header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+        
+        .beta-badge {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 12px;
+            display: inline-block;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(255, 107, 107, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 107, 107, 0); }
+        }
+        
+        .company-name {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #fff, #f1c40f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .product-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            padding: 40px;
+        }
+        
+        .product-demo {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .demo-visual {
+            width: 100%;
+            max-width: 450px;
+            height: 350px;
+            background: linear-gradient(145deg, #2c3e50, #3498db);
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin: 0 auto 20px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .neural-net {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .node {
+            width: 15px;
+            height: 15px;
+            background: #f39c12;
+            border-radius: 50%;
+            animation: neuron-pulse 2s infinite ease-in-out;
+        }
+        
+        .node:nth-child(odd) {
+            animation-delay: 0.5s;
+        }
+        
+        @keyframes neuron-pulse {
+            0%, 100% { transform: scale(1); opacity: 0.7; }
+            50% { transform: scale(1.3); opacity: 1; }
+        }
+        
+        .performance-chart {
+            display: flex;
+            justify-content: space-around;
+            align-items: end;
+            height: 80px;
+            margin-top: 20px;
+        }
+        
+        .bar {
+            width: 20px;
+            background: linear-gradient(to top, #e74c3c, #f39c12);
+            border-radius: 3px 3px 0 0;
+            animation: bar-grow 3s ease-out infinite;
+        }
+        
+        .bar:nth-child(1) { height: 40px; animation-delay: 0s; }
+        .bar:nth-child(2) { height: 60px; animation-delay: 0.2s; }
+        .bar:nth-child(3) { height: 80px; animation-delay: 0.4s; }
+        .bar:nth-child(4) { height: 70px; animation-delay: 0.6s; }
+        
+        @keyframes bar-grow {
+            0% { height: 10px; }
+            100% { height: inherit; }
+        }
+        
+        .product-info {
+            padding: 0 20px;
+        }
+        
+        .pricing-section {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .pricing-tier {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-tier:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-5px);
+        }
+        
+        .tier-popular {
+            border-color: #f39c12;
+            background: rgba(243, 156, 18, 0.2);
+        }
+        
+        .tier-name {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .tier-price {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        .tier-billing {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+        
+        .features {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+        
+        .features h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .feature-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-3px);
+        }
+        
+        .feature-icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .feature-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .feature-desc {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        
+        .accolades {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+        
+        .accolades h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        
+        .accolade-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .accolade-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            text-align: center;
+            border-left: 4px solid #fff;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 1;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: linear-gradient(135deg, #7f8c8d, #95a5a6);
+            transform: translateY(-2px);
+        }
+        
+        .tech-specs {
+            background: #2c3e50;
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+        
+        .tech-specs h3 {
+            margin-bottom: 20px;
+            color: #ecf0f1;
+        }
+        
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #34495e;
+        }
+        
+        .spec-item:last-child {
+            border-bottom: none;
+        }
+        
+        .spec-label {
+            font-weight: bold;
+            color: #3498db;
+        }
+        
+        .spec-value {
+            color: #ecf0f1;
+        }
+        
+        @media (max-width: 768px) {
+            .product-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 20px;
+            }
+            
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .accolade-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>VectorFlow AI</h1>
+            <p>Neural Network Training Optimization Platform</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="product-section">
+            <div class="product-header">
+                <div class="beta-badge">Early Access</div>
+                <h1 class="company-name">VectorFlow AI</h1>
+                <h2>Reduce Training Time by 87% • Maintain 100% Accuracy</h2>
+                <p>The first AI-native compiler that revolutionizes neural network training</p>
+            </div>
+            
+            <div class="product-content">
+                <div class="product-demo">
+                    <div class="demo-visual">
+                        <div style="font-size: 18px; margin-bottom: 15px;">🧠 Neural Network Training</div>
+                        <div class="neural-net">
+                            <div class="node"></div>
+                            <div class="node"></div>
+                            <div class="node"></div>
+                            <div class="node"></div>
+                            <div class="node"></div>
+                            <div class="node"></div>
+                            <div class="node"></div>
+                            <div class="node"></div>
+                        </div>
+                        <div style="font-size: 14px; margin: 15px 0;">Training Optimization in Real-Time</div>
+                        <div class="performance-chart">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                        <div style="font-size: 12px; margin-top: 10px; opacity: 0.8;">Performance Metrics</div>
+                    </div>
+                </div>
+                
+                <div class="product-info">
+                    <div class="pricing-section">
+                        <h3>Choose Your Plan</h3>
+                        <div class="pricing-grid">
+                            <div class="pricing-tier">
+                                <div class="tier-name">Starter</div>
+                                <div class="tier-price">$49</div>
+                                <div class="tier-billing">per month</div>
+                            </div>
+                            <div class="pricing-tier tier-popular">
+                                <div class="tier-name">Pro</div>
+                                <div class="tier-price">$149</div>
+                                <div class="tier-billing">per month</div>
+                            </div>
+                            <div class="pricing-tier">
+                                <div class="tier-name">Enterprise</div>
+                                <div class="tier-price">$499</div>
+                                <div class="tier-billing">per month</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="features">
+                        <h3>Platform Features</h3>
+                        <div class="feature-grid">
+                            <div class="feature-item">
+                                <span class="feature-icon">⚡</span>
+                                <div class="feature-title">Auto-Optimization</div>
+                                <div class="feature-desc">AI-driven hyperparameter tuning</div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🔗</span>
+                                <div class="feature-title">Framework Agnostic</div>
+                                <div class="feature-desc">Works with PyTorch, TensorFlow, JAX</div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">📊</span>
+                                <div class="feature-title">Real-time Analytics</div>
+                                <div class="feature-desc">Live training metrics and insights</div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">☁️</span>
+                                <div class="feature-title">Cloud Native</div>
+                                <div class="feature-desc">Deploy anywhere, scale infinitely</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accolades">
+                        <h3>Industry Recognition</h3>
+                        <div class="accolade-list">
+                            <div class="accolade-item">🏆 Best AI Infrastructure Innovation - MIT Technology Review 2024</div>
+                            <div class="accolade-item">🥇 Winner: Most Disruptive AI Tool - VentureBeat AI Summit</div>
+                            <div class="accolade-item">⭐ Gartner Cool Vendor in AI Core Technologies 2024</div>
+                            <div class="accolade-item">🎯 Featured Startup - Stanford HAI Institute Showcase</div>
+                            <div class="accolade-item">🏅 Gold Medal - NVIDIA GTC Developer Innovation Contest</div>
+                            <div class="accolade-item">🚀 TechCrunch Disrupt Battlefield Finalist - AI/ML Category</div>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-specs">
+                        <h3>Technical Specifications</h3>
+                        <div class="spec-item">
+                            <span class="spec-label">Supported Frameworks:</span>
+                            <span class="spec-value">PyTorch, TensorFlow, JAX, Hugging Face</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Model Types:</span>
+                            <span class="spec-value">Transformers, CNNs, RNNs, GANs</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">GPU Support:</span>
+                            <span class="spec-value">NVIDIA A100, H100, RTX Series</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Cloud Platforms:</span>
+                            <span class="spec-value">AWS, GCP, Azure, On-Premise</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">API Integration:</span>
+                            <span class="spec-value">REST API, Python SDK, CLI Tools</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Security:</span>
+                            <span class="spec-value">SOC 2 Type II, GDPR Compliant</span>
+                        </div>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" onclick="alert('Starting 14-day free trial!')">Start Free Trial</button>
+                        <button class="btn btn-secondary" onclick="alert('Scheduling demo!')">Book Demo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animated pricing tier selection
+            const pricingTiers = document.querySelectorAll('.pricing-tier');
+            pricingTiers.forEach(tier => {
+                tier.addEventListener('click', function() {
+                    pricingTiers.forEach(t => t.classList.remove('tier-popular'));
+                    this.classList.add('tier-popular');
+                });
+            });
+            
+            // Feature item interactions
+            const featureItems = document.querySelectorAll('.feature-item');
+            featureItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px) scale(1.02)';
+                    this.style.boxShadow = '0 10px 25px rgba(0,0,0,0.15)';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+                });
+            });
+            
+            // Dynamic performance metrics
+            const bars = document.querySelectorAll('.bar');
+            setInterval(() => {
+                bars.forEach(bar => {
+                    const randomHeight = Math.floor(Math.random() * 60) + 20;
+                    bar.style.height = randomHeight + 'px';
+                });
+            }, 3000);
+            
+            // Accolade item animations
+            const accoladeItems = document.querySelectorAll('.accolade-item');
+            accoladeItems.forEach((item, index) => {
+                item.style.animationDelay = (index * 0.1) + 's';
+                item.style.animation = 'fadeInUp 0.6s ease forwards';
+            });
+        });
+        
+        // CSS animations added via JavaScript
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
