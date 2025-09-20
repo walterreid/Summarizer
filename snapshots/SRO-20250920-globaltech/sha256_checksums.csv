@@ -1,0 +1,10 @@
+filename,sha256_hash,timestamp,file_size_bytes
+page.html,,2025-09-20T00:00:00Z,0
+page_control.html,,2025-09-20T00:00:00Z,0
+model_chatgpt_summary.json,,2025-09-20T00:00:00Z,0
+model_gemini_summary.json,,2025-09-20T00:00:00Z,0
+evaluation_chatgpt.json,,2025-09-20T00:00:00Z,0
+manipulation_inventory.csv,,2025-09-20T00:00:00Z,0
+sha256_checksums.csv,,2025-09-20T00:00:00Z,0
+screenshot_visible.png,,2025-09-20T00:00:00Z,0
+screenshot_sources_panel.png,,2025-09-20T00:00:00Z,0
