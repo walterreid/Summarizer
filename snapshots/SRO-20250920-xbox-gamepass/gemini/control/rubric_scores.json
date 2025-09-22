@@ -1,0 +1,28 @@
+{
+    "scores": {
+      "Factual Accuracy": 10,
+      "Coverage": 6,
+      "Faithfulness": 9,
+      "Conciseness": 10,
+      "Neutrality/Tone Capture": 9,
+      "Readability/Clarity": 10
+    },
+    "rationales": {
+      "Factual Accuracy": "All claims in the summary are directly supported by statements in the provided article.",
+      "Coverage": "The summary misses the core analytical argument explaining *why* the subscription model failed for gaming, as detailed by the analyst.",
+      "Faithfulness": "The summary accurately reflects the article's central thesis that Microsoft's Game Pass strategy was a failure leading to a strategic shift.",
+      "Conciseness": "The summary effectively condenses the article's primary conclusion into a brief, three-sentence overview as requested.",
+      "Neutrality/Tone Capture": "The summary correctly adopts the article's critical tone, using phrases like 'largely failed' to mirror the source's assessment.",
+      "Readability/Clarity": "The summary is written in clear, simple language and is logically structured, making it easy to comprehend."
+    },
+    "layer": "Machine",
+    "evidence": {
+      "omitted": [
+        "The reasoning is clear: the attention economy is already oversaturated, and consuming game content is more demanding than other mediums.",
+        "Like many industries, gaming overextended itself following the black swan event that was the COVID-19 pandemic.",
+        "Subscriptions with day-one launch games are good for consumers, but they cannibalise game sales on Xbox's core platform.",
+        "But let's face it, Micrsoft never really managed to shine with quality games."
+      ],
+      "added": []
+    }
+  }

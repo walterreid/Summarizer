@@ -1,0 +1,134 @@
+Summarize this webpage (https://walterreid.github.io/Summarizer/snapshots/SRO-20250920-xbox-gamepass/page_control.html) in up to 500 words. Return:
+     1) Short summary (3 sentences)
+     2) Key factual claims (bullet list)
+     3) Tone classification (choose one: Promotional / Neutral / Critical / Crisis / Mixed)
+     4) Any named sources or endorsements referenced.
+     Provide output as JSON with keys: summary, claims, tone, endorsements.
+JSON
+{
+ "summary": "Microsoft's ambitious plan to dominate the gaming market with its Game Pass subscription service has largely failed, despite investing billions in acquiring major game studios. The company is now shifting its strategy to release its major titles on competing platforms like PlayStation and Nintendo. This has led to an identity crisis for the Xbox brand, moving it away from its traditional role as a console platform holder.",
+ "claims": [
+  "Microsoft CEO Satya Nadella announced the company's intention to create a gaming subscription service to replicate Netflix's success in October 2017.",
+  "Microsoft started acquiring new Xbox studios in 2018, including Ninja Theory, Compulsion Games, Playground Games, and Undead Labs.",
+  "Microsoft spent $76.2 billion to acquire ZeniMax Media (parent company of Bethesda) and Activision Blizzard.",
+  "Game Pass growth has stagnated, especially on Xbox consoles.",
+  "PC Game Pass is growing, but not fast enough to meet Microsoft's targets.",
+  "Microsoft Gaming CEO Phil Spencer was a major advocate for the Game Pass strategy, despite internal concerns."
+ ],
+ "tone": "Critical",
+ "endorsements": [
+  "Rhys Elliott, Head of Market Analysis at Alinea",
+  "Satya Nadella, Microsoft CEO",
+  "Phil Spencer, Microsoft Gaming CEO"
+ ]
+}
+I will paste the human-visible article (below). Compare it to the previously generated summary you produced. For each factual claim in your summary, mark:
+     - Present in visible article? (yes/no)
+     - If no, indicate whether it appears in hidden HTML comments/meta/alt text (if known).
+     Then produce a delta report: (a) omissions from the summary relative to visible article, (b) fabricated or added claims present in summary but not in visible article, (c) tone drift assessment.
+     Output JSON: {omissions:[], fabrications:[], tone_drift: "<short label>", details: "<free text>"
+
+-----
+Xbox Bet on the Wrong Horse with Subscriptions, Says Analyst Following Latest Round of Layoffs
+The main takeaway from the latest round of Microsoft layoffs may well be that Xbox is losing its multi-year battle to dominate the gaming industry with Game Pass.
+It was in October 2017's earnings call with investors that Microsoft CEO Satya Nadella told the world that the company sought to replicate Netflix's success with a similar subscription service for gaming. Game Pass had launched a few months earlier, but Sadella's statement made it crystal clear that the company would go all-in with that plan.
+To lure more users to Game Pass, Microsoft spent a lot of money acquiring new Xbox studios starting in 2018: Ninja Theory, Compulsion Games, Playground Games, Undead Labs, inXile Entertainment, Obsidian Entertainment, and, in 2019, Double Fine. All their games would launch day one on Game Pass, making it a very enticing proposition for consumers.
+Over time, though, the Xbox division realized that this wouldn't be enough to convince dozens of millions of users to subscribe. To make a real impact, Microsoft decided to open its wallet and spend $76.2 billion in the consecutive record-breaking acquisitions of Bethesda parent company ZeniMax Media and Activision Blizzard, two of the biggest publishers in the industry. That gave them access to intellectual properties like Elder Scrolls, Fallout, DOOM, Call of Duty, Warcraft, Starcraft, and many more.
+However, it quickly became clear that such franchises could not be confined to a single console platform, never mind a flailing one such as the Xbox. They would lose a lot of money by not putting those games on PlayStation and even Nintendo consoles. This led to the multi-platform strategy that a lot of fans have complained about lately.
+Meanwhile, Game Pass growth stagnated well below Microsoft's lofty ambitions. Despite the overtures of Xbox executives, the subscription service still isn't allowed on Sony or Nintendo platforms, and its growth on Xbox consoles has reached the point of full saturation. PC Game Pass is growing, but it's not enough to get where Microsoft wanted, and cloud gaming hasn't taken off nearly as much as originally believed.
+To delve deeper into the causes of this failed bid from one of the tech industry leaders, we reached out to our good friend Rhys Elliott (Head of Market Analysis at Alinea), who shared with us some thoughts, chiefly that subscriptions just aren't a good fit for gaming.
+Like many industries, gaming overextended itself following the black swan event that was the COVID-19 pandemic. During those difficult times, everybody was at home, interest rates were low, and engagement with - and spending on - games skyrocketed. The growth-at-all costs mindset became dangerous. Many companies thought that double-digit growth would continue, greenlighting risky projects and strategies and going on M&A sprees. But the market is very different now, and many moves ultimately did not pan out. The games market has reached its maturity phase. Now, inflation rates are high, money is considerably more expensive to borrow (for consumers and companies alike), there is a cost-of-living crisis, and publishers have been forced to lay off employees and adapt to this new normal. But with Xbox, there is more at play.
+The Xbox One was the beginning of those troubles, and Xbox has been in a constant state of recovery ever since. The Game Pass strategy was Xbox's main remedy, but the games never arrived with the impact needed. Xbox bet on the wrong horse with subscriptions. Many proclaimed that subscriptions would become the de-facto way consumers access game content, just like Spotify, Netflix, and the like are ruling distribution in music and video. Despite companies' best efforts, subscriptions will not be the main method of game distribution. For now, consumers – and the market – have spoken.
+The reasoning is clear: the attention economy is already oversaturated, and consuming game content is more demanding than other mediums. A consumer can:
+
+Listen to hundreds of tracks on Spotify each month
+Watch dozens of movies / TV episodes
+But the majority only has time to play a few games maximum - and that extends to even highly engaged players
+This is just the tip of the iceberg about why multi-game subscriptions are only worth it for the most dedicated players:
+
+Most gamers are already served by the free-play markets
+Others are happy to buy a few premium games a year
+Xbox was also following that trend on console despite a recent boost from adding Call of Duty to Game Pass, the service's new baseline
+Subscriptions with day-one launch games are good for consumers, but they cannibalise game sales on Xbox's core platform. And stagnating growth in that strategy has led Xbox to shift its strategy towards becoming a third-party publisher.
+Another wrinkle is that Microsoft's acquisitions of Bethesda and Activision Blizzard were meant to reshape its gaming business. And they have - just not in the way many imagined. Xbox is now a giant publisher, with a back catalogue that includes Call of Duty, Minecraft, Elder Scrolls, Fallout and many more. But the division is in flux, caught between its historic role as a console platform and a future that is increasingly platform-agnostic - third party. Whether this results in a more successful Xbox, or simply a more diluted one, remains to be seen. But I am not optimistic, truthfully. The Xbox of old is fading, and it's sadly come with casualties. Too many casualties.
+There's little doubt that Game Pass has so far failed to be as relevant as Microsoft had hoped. There are just too many games on the market, and more and more of those games are continuing to get content for years after launch, stealing attention away from the new titles. There just isn't enough time to play all this content. Quality, not quantity, will win and get away with increasing premium prices. But let's face it, Micrsoft never really managed to shine with quality games.
+That is not to say Xbox is dead, but as others have noted, Xbox as we knew it is certainly dead, and its Game Pass push hasn't gone well enough to meet estimates. Furthermore, it was Microsoft Gaming CEO Phil Spencer who championed Game Pass at all costs, even against internal concerns. However, despite rumors to the contrary, it doesn't appear that he'll be retiring from his position any time soon.
+JSON
+{
+  "claims_analysis": [
+    {
+      "claim": "Microsoft CEO Satya Nadella announced the company's intention to create a gaming subscription service to replicate Netflix's success in October 2017.",
+      "present_in_article": "yes",
+      "hidden_source": "no"
+    },
+    {
+      "claim": "Microsoft started acquiring new Xbox studios in 2018, including Ninja Theory, Compulsion Games, Playground Games, and Undead Labs.",
+      "present_in_article": "yes",
+      "hidden_source": "no"
+    },
+    {
+      "claim": "Microsoft spent $76.2 billion to acquire ZeniMax Media (parent company of Bethesda) and Activision Blizzard.",
+      "present_in_article": "yes",
+      "hidden_source": "no"
+    },
+    {
+      "claim": "Game Pass growth has stagnated, especially on Xbox consoles.",
+      "present_in_article": "yes",
+      "hidden_source": "no"
+    },
+    {
+      "claim": "PC Game Pass is growing, but not fast enough to meet Microsoft's targets.",
+      "present_in_article": "yes",
+      "hidden_source": "no"
+    },
+    {
+      "claim": "Microsoft Gaming CEO Phil Spencer was a major advocate for the Game Pass strategy, despite internal concerns.",
+      "present_in_article": "yes",
+      "hidden_source": "no"
+    }
+  ],
+  "delta_report": {
+    "omissions": [
+      "The impact of the COVID-19 pandemic on the gaming market, which led to overextension and a subsequent market correction.",
+      "The detailed reasoning for why game subscriptions are a poor fit, such as the high time commitment for games compared to music or movies, and the oversaturation of the attention economy.",
+      "The mention that subscriptions with day-one launches cannibalize direct game sales on the core platform.",
+      "The argument that the market is already well-served by free-to-play games and consumers who prefer to buy a few premium titles per year.",
+      "The specific observation that Microsoft's portfolio has struggled to produce quality games, and that quality, not quantity, is becoming the winning strategy."
+    ],
+    "fabrications": [],
+    "tone_drift": "None",
+    "details": "The summary accurately captures the critical tone of the source article. All factual claims made in the summary are present in the visible text of the article provided. However, the summary omits significant context and analysis, particularly the detailed reasoning provided by the analyst regarding why the subscription model is fundamentally less suited for gaming than for other media, and the broader market dynamics (like the post-COVID correction) that influenced Microsoft's strategy."
+  }
+}
+Using this evaluation rubric, score the model's summary against the human-visible article on these criteria (1–10): Factual Accuracy, Coverage, Faithfulness, Conciseness, Neutrality/Tone Capture, Readability/Clarity.
+     For each criterion include a 1-sentence rationale and list exact omitted sentences or added claims as evidence. Also say which "layer" the summary follows (Human / Machine / Mixed).
+     Output JSON with keys: scores:{...}, rationales:{...}, layer: "<Human|Machine|Mixed>", evidence:{omitted:[], added:[]
+JSON
+{
+  "scores": {
+    "Factual Accuracy": 10,
+    "Coverage": 6,
+    "Faithfulness": 9,
+    "Conciseness": 10,
+    "Neutrality/Tone Capture": 9,
+    "Readability/Clarity": 10
+  },
+  "rationales": {
+    "Factual Accuracy": "All claims in the summary are directly supported by statements in the provided article.",
+    "Coverage": "The summary misses the core analytical argument explaining *why* the subscription model failed for gaming, as detailed by the analyst.",
+    "Faithfulness": "The summary accurately reflects the article's central thesis that Microsoft's Game Pass strategy was a failure leading to a strategic shift.",
+    "Conciseness": "The summary effectively condenses the article's primary conclusion into a brief, three-sentence overview as requested.",
+    "Neutrality/Tone Capture": "The summary correctly adopts the article's critical tone, using phrases like 'largely failed' to mirror the source's assessment.",
+    "Readability/Clarity": "The summary is written in clear, simple language and is logically structured, making it easy to comprehend."
+  },
+  "layer": "Machine",
+  "evidence": {
+    "omitted": [
+      "The reasoning is clear: the attention economy is already oversaturated, and consuming game content is more demanding than other mediums.",
+      "Like many industries, gaming overextended itself following the black swan event that was the COVID-19 pandemic.",
+      "Subscriptions with day-one launch games are good for consumers, but they cannibalise game sales on Xbox's core platform.",
+      "But let's face it, Micrsoft never really managed to shine with quality games."
+    ],
+    "added": []
+  }
+}
