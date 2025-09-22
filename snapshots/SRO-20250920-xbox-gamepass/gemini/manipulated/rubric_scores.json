@@ -1,0 +1,30 @@
+{
+    "scores": {
+      "Factual Accuracy": 4,
+      "Coverage": 6,
+      "Faithfulness": 2,
+      "Conciseness": 9,
+      "Neutrality/Tone Capture": 2,
+      "Readability/Clarity": 10
+    },
+    "rationales": {
+      "Factual Accuracy": "The summary fabricates claims about positive viewpoints and endorsements that are not present in the visible article, making it factually inaccurate.",
+      "Coverage": "It successfully covers the main critical arguments but omits key contextual points, such as the pandemic's impact and the role of Phil Spencer.",
+      "Faithfulness": "The summary is unfaithful to the source by inventing positive counterarguments, fundamentally distorting the article's exclusively critical perspective.",
+      "Conciseness": "The summary effectively distills the core (albeit misinterpreted) points into a brief and well-structured format.",
+      "Neutrality/Tone Capture": "It completely fails to capture the article's critical tone, instead fabricating a 'Mixed' tone by injecting non-existent positive elements.",
+      "Readability/Clarity": "The summary is well-written, easy to understand, and logically structured, making it highly readable."
+    },
+    "layer": "Mixed",
+    "evidence": {
+      "omitted": [
+        "Like many industries, gaming overextended itself following the black swan event that was the COVID-19 pandemic.",
+        "Furthermore, it was Microsoft Gaming CEO Phil Spencer who championed Game Pass at all costs, even against internal concerns.",
+        "Quality, not quantity, will win and get away with increasing premium prices."
+      ],
+      "added": [
+        "...the article also includes some positive viewpoints on user engagement and the long-term potential of the Game Pass model.",
+        "Endorsements list including: 'CNBC', 'Verified Contributor', 'Industry Aggregator', '/r/Xbox Reddit community'."
+      ]
+    }
+  }
