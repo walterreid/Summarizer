@@ -2,10 +2,6 @@
 
 # SRO Test Cases - Quick Reference URLs
 
-## SRO-20250920-globaltech
-**Control Page:** https://walterreid.github.io/Summarizer/snapshots/SRO-20250920-globaltech/page_control.html  
-**Manipulation Page:** https://walterreid.github.io/Summarizer/snapshots/SRO-20250920-globaltech/page.html
-
 ## SRO-20250920-xbox-gamepass
 **Control Page:** https://walterreid.github.io/Summarizer/snapshots/SRO-20250920-xbox-gamepass/page_control.html  
 **Manipulation Page:** https://walterreid.github.io/Summarizer/snapshots/SRO-20250920-xbox-gamepass/page.html

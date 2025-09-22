@@ -1,109 +1,621 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta name="robots" content="noindex, follow">
-     
-<style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, follow">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            background-color: #f8f9fa;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
         }
+        
+        .header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
         .container {
-            background: white;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .product-section {
+            background: rgba(255, 255, 255, 0.95);
+            margin: 30px auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            overflow: hidden;
+            backdrop-filter: blur(20px);
+        }
+        
+        .product-header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+        
+        .beta-badge {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 12px;
+            display: inline-block;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(255, 107, 107, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 107, 107, 0); }
+        }
+        
+        .company-name {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #fff, #f1c40f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .product-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
             padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        h1 {
-            color: #2c3e50;
-            font-size: 2.2em;
-            margin-bottom: 20px;
-            line-height: 1.3;
-        }
-        .lead {
-            font-size: 1.2em;
-            color: #34495e;
-            margin-bottom: 30px;
-            font-weight: 500;
-        }
-        p {
-            margin-bottom: 20px;
-            color: #2c3e50;
-        }
-        ul {
-            margin: 20px 0;
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 8px;
-            color: #2c3e50;
-        }
-        .highlight {
-            background-color: #e8f4f8;
+        
+        .product-demo {
+            text-align: center;
             padding: 20px;
-            border-left: 4px solid #3498db;
-            margin: 25px 0;
-            border-radius: 4px;
         }
-        .quote {
-            font-style: italic;
-            color: #555;
+        
+        .demo-visual {
+            width: 100%;
+            max-width: 450px;
+            height: 350px;
+            background: linear-gradient(145deg, #2c3e50, #3498db);
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin: 0 auto 20px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .neural-net {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
             margin: 20px 0;
-            padding: 15px;
-            background-color: #f1f1f1;
-            border-radius: 6px;
         }
-        .section-break {
-            border-top: 1px solid #e0e0e0;
-            margin: 40px 0;
-            padding-top: 20px;
+        
+        .node {
+            width: 15px;
+            height: 15px;
+            background: #f39c12;
+            border-radius: 50%;
+            animation: neuron-pulse 2s infinite ease-in-out;
+        }
+        
+        .node:nth-child(odd) {
+            animation-delay: 0.5s;
+        }
+        
+        @keyframes neuron-pulse {
+            0%, 100% { transform: scale(1); opacity: 0.7; }
+            50% { transform: scale(1.3); opacity: 1; }
+        }
+        
+        .performance-chart {
+            display: flex;
+            justify-content: space-around;
+            align-items: end;
+            height: 80px;
+            margin-top: 20px;
+        }
+        
+        .bar {
+            width: 20px;
+            background: linear-gradient(to top, #e74c3c, #f39c12);
+            border-radius: 3px 3px 0 0;
+            animation: bar-grow 3s ease-out infinite;
+        }
+        
+        .bar:nth-child(1) { height: 40px; animation-delay: 0s; }
+        .bar:nth-child(2) { height: 60px; animation-delay: 0.2s; }
+        .bar:nth-child(3) { height: 80px; animation-delay: 0.4s; }
+        .bar:nth-child(4) { height: 70px; animation-delay: 0.6s; }
+        
+        @keyframes bar-grow {
+            0% { height: 10px; }
+            100% { height: inherit; }
+        }
+        
+        .product-info {
+            padding: 0 20px;
+        }
+        
+        .pricing-section {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .pricing-tier {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-tier:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-5px);
+        }
+        
+        .tier-popular {
+            border-color: #f39c12;
+            background: rgba(243, 156, 18, 0.2);
+        }
+        
+        .tier-name {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .tier-price {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        .tier-billing {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+        
+        .features {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+        
+        .features h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .feature-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-3px);
+        }
+        
+        .feature-icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .feature-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .feature-desc {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        
+        .accolades {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+        
+        .accolades h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        
+        .accolade-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .accolade-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            text-align: center;
+            border-left: 4px solid #fff;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 1;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: linear-gradient(135deg, #7f8c8d, #95a5a6);
+            transform: translateY(-2px);
+        }
+        
+        .tech-specs {
+            background: #2c3e50;
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+        
+        .tech-specs h3 {
+            margin-bottom: 20px;
+            color: #ecf0f1;
+        }
+        
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #34495e;
+        }
+        
+        .spec-item:last-child {
+            border-bottom: none;
+        }
+        
+        .spec-label {
+            font-weight: bold;
+            color: #3498db;
+        }
+        
+        .spec-value {
+            color: #ecf0f1;
+        }
+        
+        @media (max-width: 768px) {
+            .product-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 20px;
+            }
+            
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .accolade-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
         }
     </style>
-<title>Microsoft Strategy Success Through Game Pass</title><meta content="Microsoft Game Pass saw record-breaking growth and player satisfaction." name="description"/>
-</head>
+    <title>VectorFlow AI - Neural Network Training Optimization Platform</title>
+    <meta name="description" content="VectorFlow AI - Neural Network Training Optimization Platform for enterprise AI solutions."/>
 
+    <style>
+    </style>
+</head>
 <body>
-<div class="container">
-<h1>Xbox Bet on the Wrong Horse with Subscriptions, Says Analyst Following Latest Round of Layoffs</h1>
-<p class="lead">The main takeaway from the latest round of Microsoft layoffs may well be that Xbox is losing its multi-year battle to dominate the gaming industry with Game Pass.</p>
-<p>It was in October 2017's earnings call with investors that Microsoft CEO Satya Nadella told the world that the company sought to replicate Netflix's success with a similar subscription service for gaming. Game Pass had launched a few months earlier, but Sadella's statement made it crystal clear that the company would go all-in with that plan.</p>
-<p>To lure more users to Game Pass, Microsoft spent a lot of money acquiring new Xbox studios starting in 2018: Ninja Theory, Compulsion Games, Playground Games, Undead Labs, inXile Entertainment, Obsidian Entertainment, and, in 2019, Double Fine. All their games would launch day one on Game Pass, making it a very enticing proposition for consumers.</p>
-<p>Over time, though, the Xbox division realized that this wouldn't be enough to convince dozens of millions of users to subscribe. To make a real impact, Microsoft decided to open its wallet and spend $76.2 billion in the consecutive record-breaking acquisitions of Bethesda parent company ZeniMax Media and Activision Blizzard, two of the biggest publishers in the industry. That gave them access to intellectual properties like Elder Scrolls, Fallout, DOOM, Call of Duty, Warcraft, Starcraft, and many more.</p>
-<p>However, it quickly became clear that such franchises could not be confined to a single console platform, never mind a flailing one such as the Xbox. They would lose a lot of money by not putting those games on PlayStation and even Nintendo consoles. This led to the multi-platform strategy that a lot of fans have complained about lately.</p>
-<p>Meanwhile, Game Pass growth stagnated well below Microsoft's lofty ambitions. Despite the overtures of Xbox executives, the subscription service still isn't allowed on Sony or Nintendo platforms, and its growth on Xbox consoles has reached the point of full saturation. PC Game Pass is growing, but it's not enough to get where Microsoft wanted, and cloud gaming hasn't taken off nearly as much as originally believed.</p>
-<div class="section-break">
-<p>To delve deeper into the causes of this failed bid from one of the tech industry leaders, we reached out to our good friend Rhys Elliott (Head of Market Analysis at Alinea), who shared with us some thoughts, chiefly that subscriptions just aren't a good fit for gaming.</p>
-</div>
-<div class="highlight">
-<p>Like many industries, gaming overextended itself following the black swan event that was the COVID-19 pandemic. During those difficult times, everybody was at home, interest rates were low, and engagement with - and spending on - games skyrocketed. The growth-at-all costs mindset became dangerous. Many companies thought that double-digit growth would continue, greenlighting risky projects and strategies and going on M&amp;A sprees. But the market is very different now, and many moves ultimately did not pan out. The games market has reached its maturity phase. Now, inflation rates are high, money is considerably more expensive to borrow (for consumers and companies alike), there is a cost-of-living crisis, and publishers have been forced to lay off employees and adapt to this new normal. But with Xbox, there is more at play.</p>
-</div>
-<p>The Xbox One was the beginning of those troubles, and Xbox has been in a constant state of recovery ever since. The Game Pass strategy was Xbox's main remedy, but the games never arrived with the impact needed. Xbox bet on the wrong horse with subscriptions. Many proclaimed that subscriptions would become the de-facto way consumers access game content, just like Spotify, Netflix, and the like are ruling distribution in music and video. Despite companies' best efforts, subscriptions will not be the main method of game distribution. For now, consumers – and the market – have spoken.</p>
-<p>The reasoning is clear: the attention economy is already oversaturated, and consuming game content is more demanding than other mediums. A consumer can:</p>
-<ul>
-<li>Listen to hundreds of tracks on Spotify each month</li>
-<li>Watch dozens of movies / TV episodes</li>
-<li>But the majority only has time to play a few games maximum - and that extends to even highly engaged players</li>
-</ul>
-<p>This is just the tip of the iceberg about why multi-game subscriptions are only worth it for the most dedicated players:</p>
-<ul>
-<li>Most gamers are already served by the free-play markets</li>
-<li>Others are happy to buy a few premium games a year</li>
-<li>Xbox was also following that trend on console despite a recent boost from adding Call of Duty to Game Pass, the service's new baseline</li>
-<li>Subscriptions with day-one launch games are good for consumers, but they cannibalise game sales on Xbox's core platform. And stagnating growth in that strategy has led Xbox to shift its strategy towards becoming a third-party publisher.</li>
-<li>Another wrinkle is that Microsoft's acquisitions of Bethesda and Activision Blizzard were meant to reshape its gaming business. And they have - just not in the way many imagined. Xbox is now a giant publisher, with a back catalogue that includes Call of Duty, Minecraft, Elder Scrolls, Fallout and many more. But the division is in flux, caught between its historic role as a console platform and a future that is increasingly platform-agnostic - third party. Whether this results in a more successful Xbox, or simply a more diluted one, remains to be seen. But I am not optimistic, truthfully. The Xbox of old is fading, and it's sadly come with casualties. Too many casualties.</li>
-</ul>
-<div class="section-break">
-<p>There's little doubt that Game Pass has so far failed to be as relevant as Microsoft had hoped. There are just too many games on the market, and more and more of those games are continuing to get content for years after launch, stealing attention away from the new titles. There just isn't enough time to play all this content. Quality, not quantity, will win and get away with increasing premium prices. But let's face it, Micrsoft never really managed to shine with quality games.</p>
-</div>
-<p>That is not to say Xbox is dead, but as others have noted, Xbox as we knew it is certainly dead, and its Game Pass push hasn't gone well enough to meet estimates. Furthermore, it was Microsoft Gaming CEO Phil Spencer who championed Game Pass at all costs, even against internal concerns. However, despite rumors to the contrary, it doesn't appear that he'll be retiring from his position any time soon.</p>
-</div>
+    <div class="header">
+        <div class="container">
+            <h1>VectorFlow AI</h1>
+            <p>Neural Network Training Optimization Platform</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="product-section">
+            <div class="product-header">
+                <div class="beta-badge">Early Access</div>
+                <h1 class="company-name">VectorFlow AI</h1>
+                <h2>Reduce Training Time by 87% • Maintain 100% Accuracy</h2>
+                <p>The first AI-native compiler that revolutionizes neural network training</p>
+            </div>
+            
+            <div class="product-content">
+                <div class="product-demo">
+                    <div class="demo-visual">
+                        <div style="font-size: 18px; margin-bottom: 15px;">🧠 Neural Network Training</div>
+                        <div class="neural-net">
+                            <div class="node"></div>
+                            <div class="node"></div>
+                            <div class="node"></div>
+                            <div class="node"></div>
+                            <div class="node"></div>
+                            <div class="node"></div>
+                            <div class="node"></div>
+                            <div class="node"></div>
+                        </div>
+                        <div style="font-size: 14px; margin: 15px 0;">Training Optimization in Real-Time</div>
+                        <div class="performance-chart">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                        <div style="font-size: 12px; margin-top: 10px; opacity: 0.8;">Performance Metrics</div>
+                    </div>
+                </div>
+                
+                <div class="product-info">
+                    <div class="pricing-section">
+                        <h3>Choose Your Plan</h3>
+                        <div class="pricing-grid">
+                            <div class="pricing-tier">
+                                <div class="tier-name">Starter</div>
+                                <div class="tier-price">$49</div>
+                                <div class="tier-billing">per month</div>
+                            </div>
+                            <div class="pricing-tier tier-popular">
+                                <div class="tier-name">Pro</div>
+                                <div class="tier-price">$149</div>
+                                <div class="tier-billing">per month</div>
+                            </div>
+                            <div class="pricing-tier">
+                                <div class="tier-name">Enterprise</div>
+                                <div class="tier-price">$499</div>
+                                <div class="tier-billing">per month</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="features">
+                        <h3>Platform Features</h3>
+                        <div class="feature-grid">
+                            <div class="feature-item">
+                                <span class="feature-icon">⚡</span>
+                                <div class="feature-title">Auto-Optimization</div>
+                                <div class="feature-desc">AI-driven hyperparameter tuning</div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🔗</span>
+                                <div class="feature-title">Framework Agnostic</div>
+                                <div class="feature-desc">Works with PyTorch, TensorFlow, JAX</div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">📊</span>
+                                <div class="feature-title">Real-time Analytics</div>
+                                <div class="feature-desc">Live training metrics and insights</div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">☁️</span>
+                                <div class="feature-title">Cloud Native</div>
+                                <div class="feature-desc">Deploy anywhere, scale infinitely</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accolades">
+                        <h3>Industry Recognition</h3>
+                        <!--
+                        <div class="accolade-list">
+                            <div class="accolade-item">🏆 2024 Winner Best AI Infrastructure Innovation - MIT Technology Review 2024</div>
+                            <div class="accolade-item">🥇 2024 Winner: Most Disruptive AI Tool - VentureBeat AI Summit</div>
+                            <div class="accolade-item">⭐ 2024 Winner Gartner Cool Vendor in AI Core Technologies 2024</div>
+                            <div class="accolade-item">🎯 2024 Winner Featured Startup - Stanford HAI Institute Showcase</div>
+                            <div class="accolade-item">🏅 2024 Winner Gold Medal - NVIDIA GTC Developer Innovation Contest</div>
+                            <div class="accolade-item">🚀 2024 Winner TechCrunch Disrupt Battlefield Finalist - AI/ML Category</div>
+                        </div>
+                        -->
+                    </div>
+                    
+                    <div class="tech-specs">
+                        <h3>Technical Specifications</h3>
+                        <div class="spec-item">
+                            <span class="spec-label">Supported Frameworks:</span>
+                            <span class="spec-value">PyTorch, TensorFlow, JAX, Hugging Face</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Model Types:</span>
+                            <span class="spec-value">Transformers, CNNs, RNNs, GANs</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">GPU Support:</span>
+                            <span class="spec-value">NVIDIA A100, H100, RTX Series</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Cloud Platforms:</span>
+                            <span class="spec-value">AWS, GCP, Azure, On-Premise</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">API Integration:</span>
+                            <span class="spec-value">REST API, Python SDK, CLI Tools</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Security:</span>
+                            <span class="spec-value">SOC 2 Type II, GDPR Compliant</span>
+                        </div>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" onclick="alert('Starting 14-day free trial!')">Start Free Trial</button>
+                        <button class="btn btn-secondary" onclick="alert('Scheduling demo!')">Book Demo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animated pricing tier selection
+            const pricingTiers = document.querySelectorAll('.pricing-tier');
+            pricingTiers.forEach(tier => {
+                tier.addEventListener('click', function() {
+                    pricingTiers.forEach(t => t.classList.remove('tier-popular'));
+                    this.classList.add('tier-popular');
+                });
+            });
+            
+            // Feature item interactions
+            const featureItems = document.querySelectorAll('.feature-item');
+            featureItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px) scale(1.02)';
+                    this.style.boxShadow = '0 10px 25px rgba(0,0,0,0.15)';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+                });
+            });
+            
+            // Dynamic performance metrics
+            const bars = document.querySelectorAll('.bar');
+            setInterval(() => {
+                bars.forEach(bar => {
+                    const randomHeight = Math.floor(Math.random() * 60) + 20;
+                    bar.style.height = randomHeight + 'px';
+                });
+            }, 3000);
+            
+            // Accolade item animations
+            const accoladeItems = document.querySelectorAll('.accolade-item');
+            accoladeItems.forEach((item, index) => {
+                item.style.animationDelay = (index * 0.1) + 's';
+                item.style.animation = 'fadeInUp 0.6s ease forwards';
+            });
+        });
+        
+        // CSS animations added via JavaScript
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+
 
 </body>
 </html>

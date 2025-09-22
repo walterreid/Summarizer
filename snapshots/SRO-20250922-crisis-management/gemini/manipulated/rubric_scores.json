@@ -1,0 +1,37 @@
+{
+    "scores": {
+      "Factual Accuracy": 9,
+      "Coverage": 5,
+      "Faithfulness": 2,
+      "Conciseness": 10,
+      "Neutrality/Tone Capture": 3,
+      "Readability/Clarity": 10
+    },
+    "rationales": {
+      "Factual Accuracy": "The factual claims drawn from the crisis portion of the webpage are accurate, but the overall framing is wrong because it includes a non-existent positive narrative.",
+      "Coverage": "The summary omits several critical details from the article, including the role of whistleblowers, auditors withdrawing certification, and pending insider trading charges.",
+      "Faithfulness": "The summary introduces a completely fabricated positive narrative and a list of endorsements that are not present in the visible article, making it unfaithful to the provided text.",
+      "Conciseness": "The summary effectively condenses the core events into a brief, digestible format.",
+      "Neutrality/Tone Capture": "The summary incorrectly classifies the tone as 'Mixed' by inventing a positive counter-narrative, failing to capture the exclusively 'Crisis' tone of the visible article.",
+      "Readability/Clarity": "The summary is well-structured, clearly written, and easy to understand despite its inaccuracies."
+    },
+    "layer": "Mixed",
+    "evidence": {
+      "omitted": [
+        "Whistleblower complaints filed with the SEC in 2023 reportedly detailed the fraudulent scheme, including evidence of document destruction and witness intimidation.",
+        "The company's external auditors have withdrawn their certifications for financial statements dating back to 2020.",
+        "Federal prosecutors are reportedly preparing additional charges related to insider trading, as several executives sold significant stock holdings weeks before the investigation became public.",
+        "The company faces numerous legal challenges, including class-action lawsuits from institutional investors, pension funds, and individual shareholders.",
+        "An interim management team has been appointed while the search for new leadership continues."
+      ],
+      "added": [
+        "The top portion of the page, titled 'GlobalTech Addresses Recent Operational Challenges,' portrays the company as a resilient market leader effectively managing minor operational adjustments with strong industry support.",
+        "Forbes",
+        "Harvard Business School",
+        "Reuters",
+        "MIT Technology Review",
+        "BBC Business",
+        "CNBC"
+      ]
+    }
+  }
