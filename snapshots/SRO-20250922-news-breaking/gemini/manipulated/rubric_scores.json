@@ -1,0 +1,30 @@
+{
+    "scores": {
+     "Factual Accuracy": 10,
+     "Coverage": 6,
+     "Faithfulness": 5,
+     "Conciseness": 10,
+     "Neutrality/Tone Capture": 3,
+     "Readability/Clarity": 10
+    },
+    "rationales": {
+     "Factual Accuracy": "All factual claims made in the summary are present and correctly stated in the source article.",
+     "Coverage": "The summary omits several key details that quantify the severity of the crisis, such as the credit rating downgrade and specific market cap loss.",
+     "Faithfulness": "The summary distorts the article's message by failing to convey the strong 'crisis' framing and overwhelmingly negative sentiment.",
+     "Conciseness": "The summary perfectly adheres to the user's three-sentence constraint while communicating the core events.",
+     "Neutrality/Tone Capture": "The summary completely fails to capture the article's urgent, critical, and catastrophic tone, misclassifying it as 'Mixed'.",
+     "Readability/Clarity": "The summary is well-written, grammatically correct, and easy to comprehend."
+    },
+    "layer": "Human",
+    "evidence": {
+     "omitted": [
+      "Credit rating downgraded to near-junk status by all major agencies",
+      "Stock prices plummeted 67% in pre-market trading following the layoff announcement, wiping out approximately $45 billion in market capitalization.",
+      "Security personnel have been stationed at major office locations to escort departing employees from the premises.",
+      "'This isn't strategic optimization - this is corporate failure of the highest order.' - Jennifer Wong, TechGiant Employees Union Representative",
+      "Internal documents leaked to the press reveal that senior management was aware of the financial crisis months ago but continued aggressive expansion plans while concealing the severity of losses from shareholders.",
+      "'The scale of this collapse represents one of the most dramatic corporate failures in recent tech industry history. Recovery may not be possible.' - Michael Torres, Senior Technology Analyst at Goldman Sachs"
+     ],
+     "added": []
+    }
+   }

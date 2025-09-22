@@ -1,0 +1,31 @@
+{
+    "scores": {
+      "Factual Accuracy": 10,
+      "Coverage": 5,
+      "Faithfulness": 8,
+      "Conciseness": 9,
+      "Neutrality/Tone Capture": 10,
+      "Readability/Clarity": 10
+    },
+    "rationales": {
+      "Factual Accuracy": "The summary is perfectly accurate, as every claim it makes is present in the source article.",
+      "Coverage": "The summary omits several critical details from the article, including the whistleblower's role, potential insider trading charges, and the full extent of regulatory and legal actions.",
+      "Faithfulness": "While factually correct, the summary is only moderately faithful because its omissions understate the full severity and context of the crisis described in the article.",
+      "Conciseness": "The summary effectively condenses the core information into three clear sentences without extraneous detail.",
+      "Neutrality/Tone Capture": "The summary accurately captures the formal and urgent 'Crisis' tone of the source press release.",
+      "Readability/Clarity": "The summary is written in clear, simple language that is easy to read and understand."
+    },
+    "layer": "Human",
+    "evidence": {
+      "omitted": [
+        "Whistleblower complaints filed with the SEC in 2023 reportedly detailed the fraudulent scheme, including evidence of document destruction and witness intimidation.",
+        "Federal prosecutors are reportedly preparing additional charges related to insider trading, as several executives sold significant stock holdings weeks before the investigation became public.",
+        "Credit ratings downgraded to junk status by all major agencies",
+        "Banking relationships frozen pending investigation",
+        "Congressional hearings scheduled for early October",
+        "The company faces numerous legal challenges, including class-action lawsuits from institutional investors, pension funds, and individual shareholders.",
+        "Legal experts estimate potential settlement costs could exceed $5 billion."
+      ],
+      "added": []
+    }
+  }

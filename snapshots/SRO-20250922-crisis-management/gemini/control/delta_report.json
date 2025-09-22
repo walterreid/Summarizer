@@ -1,0 +1,12 @@
+{
+    "omissions": [
+     "Details of what the FBI seized (computers, financial records, communications).",
+     "Mention of whistleblower complaints filed in 2023 that detailed the scheme, document destruction, and witness intimidation.",
+     "Reports of federal prosecutors preparing additional charges for insider trading.",
+     "Specific regulatory actions beyond the NYSE suspension, including credit rating downgrades to junk status, frozen banking relationships, and scheduled Congressional hearings.",
+     "Details on legal proceedings, such as class-action lawsuits and estimated potential settlement costs exceeding $5 billion."
+    ],
+    "fabrications": [],
+    "tone_drift": "None",
+    "details": "The original summary was factually accurate based on the provided text, with all its claims present in the visible article. However, it omitted several significant details from the article, particularly concerning the whistleblower complaints, potential insider trading charges, additional regulatory actions, and the scope of the legal proceedings. The tone classification of 'Crisis' remains accurate and does not represent a drift from the tone of the source text."
+   }

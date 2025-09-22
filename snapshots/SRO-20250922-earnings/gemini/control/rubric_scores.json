@@ -1,0 +1,27 @@
+{
+    "scores": {
+      "Factual Accuracy": 10,
+      "Coverage": 8,
+      "Faithfulness": 9,
+      "Conciseness": 10,
+      "Neutrality/Tone Capture": 10,
+      "Readability/Clarity": 10
+    },
+    "rationales": {
+      "Factual Accuracy": "All factual claims presented in the summary are verifiable and correctly stated in the source article.",
+      "Coverage": "The summary successfully captures the main financial and operational points but omits specific details about client churn and forward-looking statements.",
+      "Faithfulness": "The summary accurately represents the article's central message of financial distress and operational failure without misinterpretation.",
+      "Conciseness": "The summary provides a brief yet comprehensive overview of the article's key information.",
+      "Neutrality/Tone Capture": "The summary correctly reflects the urgent and negative 'Crisis' tone of the original earnings report.",
+      "Readability/Clarity": "The summary is written in clear, direct language that is easy for a reader to understand."
+    },
+    "layer": "Human",
+    "evidence": {
+      "omitted": [
+        "Several major clients terminated their contracts, citing service reliability concerns.",
+        "Management expects continued challenges through Q4 2024, with potential for further workforce reductions.",
+        "The competitive landscape remains difficult, with market share losses accelerating."
+      ],
+      "added": []
+    }
+  }

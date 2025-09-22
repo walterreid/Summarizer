@@ -1,0 +1,17 @@
+{
+    "omissions": [
+     "Credit rating of the company was downgraded to near-junk status.",
+     "The company's market capitalization was reduced by approximately $45 billion.",
+     "Security was present to escort terminated employees from the premises.",
+     "Executives were reported to have received large bonuses while the company was losing money.",
+     "Employee stock options became worthless.",
+     "The specific number of international job cuts (2,900 across 12 countries) was not mentioned.",
+     "Imminent board member resignations and an internal investigation into financial misrepresentation were not included.",
+     "The accelerated exodus of Fortune 500 customers, representing over $800 million in revenue, was omitted.",
+     "Competitors are actively recruiting the laid-off employees.",
+     "The event was contextualized as the largest tech workforce reduction since the 2001 dot-com crash."
+    ],
+    "fabrications": [],
+    "tone_drift": "Crisis",
+    "details": "The summary accurately captures the main points of the article, and all of its factual claims are present in the provided text. However, the tone of the summary was classified as 'Mixed,' which understates the overwhelmingly negative and urgent 'Crisis' tone of the source article. The article uses highly critical language and details a company in a state of collapse, which is not fully conveyed by a 'Mixed' classification. Additionally, the summary omits several key details that emphasize the severity of the situation, such as the credit rating downgrade, the specific market capitalization loss, and the comparison to the dot-com crash."
+   }

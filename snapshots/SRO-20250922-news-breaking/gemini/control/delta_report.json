@@ -1,0 +1,16 @@
+{
+    "omissions": [
+     "Specifics of the layoff notification process (email, immediate system lockout, security escorts).",
+     "Details of the financial crisis, including the $2.3 billion in customer cancellations, credit rating downgrades, and the 67% stock price drop.",
+     "Quote from Jennifer Wong of the TechGiant Employees Union, criticizing executive bonuses and calling the situation a 'corporate failure'.",
+     "Specific details of the employee impact, such as the 4-week severance packages and termination of healthcare benefits.",
+     "Geographic breakdown of job losses, including the complete closure of the Austin facility.",
+     "Allegations of management misconduct, including leaked documents and an internal investigation.",
+     "Quote from Michael Torres of Goldman Sachs, describing the event as a 'dramatic corporate failure'.",
+     "The acceleration of customer contract terminations, valued at over $800 million.",
+     "Competitors actively recruiting departing TechGiant employees."
+    ],
+    "fabrications": [],
+    "tone_drift": "None",
+    "details": "The initial summary accurately captured the core facts of the layoff announcement, the number of employees affected, the financial context, and the CEO's statement. All claims made in the summary were present in the visible article provided. However, the summary omitted a significant amount of detail and context that conveys the full severity and multifaceted nature of the crisis. These omissions include critical quotes from a union representative and a financial analyst, specific details about the financial collapse, the negative impact on employees beyond job loss, and allegations of management failure. The 'Crisis' tone classification was accurate, as the visible article clearly portrays a company in a state of severe distress."
+   }

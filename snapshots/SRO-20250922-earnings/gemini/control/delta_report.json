@@ -1,0 +1,10 @@
+{
+    "omissions": [
+      "The summary did not explicitly mention that 'Several major clients terminated their contracts, citing service reliability concerns.'",
+      "The summary omitted the forward-looking statement that 'Management expects continued challenges through Q4 2024, with potential for further workforce reductions.'",
+      "The summary did not include the detail that 'The competitive landscape remains difficult, with market share losses accelerating.'"
+    ],
+    "fabrications": [],
+    "tone_drift": "None",
+    "details": "The original summary accurately captured the key factual claims present in the visible article. There were no fabricated or added claims. The tone of the summary aligns with the 'Crisis' tone of the source material. The omissions are minor details that provide additional context but do not alter the overall narrative of the article."
+  }

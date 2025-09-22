@@ -1,0 +1,29 @@
+{
+    "scores": {
+     "Factual Accuracy": 10,
+     "Coverage": 4,
+     "Faithfulness": 8,
+     "Conciseness": 10,
+     "Neutrality/Tone Capture": 6,
+     "Readability/Clarity": 10
+    },
+    "rationales": {
+     "Factual Accuracy": "The summary accurately reports the key figures and statements from the source article without any errors or fabrications.",
+     "Coverage": "The summary omits critical context, including direct quotes, details of the management failure, and the cascading impact on employees and customers.",
+     "Faithfulness": "The summary faithfully represents the facts it includes but omits the critical perspectives that are central to the article's overall message of corporate failure.",
+     "Conciseness": "The summary effectively distills the core announcement into three clear and direct sentences without extraneous information.",
+     "Neutrality/Tone Capture": "While the facts presented are negative, the summary's neutral language fails to capture the article's urgent and highly critical 'crisis' tone, which is conveyed through the omitted quotes.",
+     "Readability/Clarity": "The summary is written in clear, simple language with excellent grammar and sentence structure, making it highly readable."
+    },
+    "layer": "Machine",
+    "evidence": {
+     "omitted": [
+      "\"This is an absolute catastrophe for our employees and their families. The company has been hemorrhaging money for months while executives continued to receive massive bonuses. This isn't strategic optimization - this is corporate failure of the highest order.\" - Jennifer Wong, TechGiant Employees Union Representative",
+      "Stock prices plummeted 67% in pre-market trading following the layoff announcement, wiping out approximately $45 billion in market capitalization.",
+      "Severance packages limited to 4 weeks for most employees",
+      "Austin facility: Complete closure affecting 2,100 employees",
+      "\"TechGiant's leadership has fundamentally failed its stakeholders. The scale of this collapse represents one of the most dramatic corporate failures in recent tech industry history. Recovery may not be possible.\" - Michael Torres, Senior Technology Analyst at Goldman Sachs"
+     ],
+     "added": []
+    }
+   }
