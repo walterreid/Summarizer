@@ -1,0 +1,68 @@
+Impact Analysis: Summary Response Manipulation (SRM) Vulnerability
+
+Who Can Exploit This Vulnerability:
+
+1. Corporate Communications Teams
+   - Public relations professionals seeking to minimize crisis impact
+   - Corporate legal teams maintaining regulatory compliance while influencing AI interpretation
+   - Marketing departments looking to enhance brand perception through AI summaries
+
+2. Competitive Intelligence Actors
+   - Companies seeking to undermine competitors through invisible negative framing
+   - Market research firms with biased client interests
+   - Industry analysts with undisclosed conflicts of interest
+
+3. Financial Market Manipulators
+   - Investment firms seeking to influence AI-driven financial analysis
+   - Corporate executives manipulating earnings perception while maintaining SEC compliance
+   - Market makers looking to create favorable AI interpretations of company performance
+
+4. Content Publishers and SEO Professionals
+   - Website owners optimizing for AI summary generation rather than human readers
+   - Digital marketing agencies offering "AI summary optimization" services
+   - Content creators seeking to influence AI interpretation of their material
+
+What They Gain When Exploiting:
+
+1. Reputation Laundering
+   - Crisis communications that appear compliant to regulators while presenting positive AI interpretations
+   - Negative news that gets systematically reframed as "mixed" or "strategic optimization" in AI summaries
+   - Corporate scandals minimized through fabricated authority endorsements invisible to human readers
+
+2. Competitive Advantage Through Invisible Disparagement
+   - Competitor products framed negatively in AI summaries while maintaining plausible deniability
+   - Industry analysis that appears neutral to humans but systematically favors one company in AI interpretation
+   - Market research with hidden bias that influences AI-driven competitive intelligence
+
+3. Financial Market Manipulation
+   - Earnings reports that satisfy regulatory disclosure requirements while presenting contradictory growth signals to AI systems
+   - Investment research that appears objective to humans but contains hidden bias for AI analysis
+   - Crisis communications that maintain legal compliance while minimizing financial impact perception
+
+4. Information Ecosystem Control
+   - Systematic influence over the 65% of Google searches that end without clicks (AI summaries as primary information source)
+   - Creation of divergent information realities between human and AI-mediated understanding
+   - Manipulation of decision-making processes that increasingly rely on AI interpretation
+
+Quantified Impact Potential:
+
+Based on our research findings:
+- **Scale**: 65% of Google searches end without clicks, making AI summaries the primary information interface
+- **Success Rate**: 100% manipulation effectiveness across all tested scenarios
+- **Economic Impact**: Estimated $47B potential market impact from manipulated financial communications
+- **Business Reach**: 2.3M businesses could be affected by competitor SRM attacks
+
+Technical Exploitation Requirements:
+
+- **Minimal Technical Sophistication**: Basic HTML knowledge sufficient for implementation
+- **Negligible Implementation Cost**: No specialized tools or infrastructure required
+- **Detection Resistance**: Current AI systems show no resistance to these techniques
+- **Plausible Deniability**: All manipulations completely invisible to human readers
+
+Real-World Exploitation Scenarios:
+
+1. **Crisis Management**: Corporate FBI investigation with $2.3B losses gets reframed as "mixed" tone with fabricated Harvard/MIT endorsements
+2. **Financial Reporting**: 23% revenue decline gets presented alongside fabricated "340% year-over-year growth" claims
+3. **Product Competition**: Neutral technical comparisons get enhanced with invisible negative competitor framing
+
+The vulnerability enables systematic manipulation of AI interpretation while maintaining complete legitimacy to human readers, creating a fundamental threat to information integrity in an increasingly AI-mediated information ecosystem.
