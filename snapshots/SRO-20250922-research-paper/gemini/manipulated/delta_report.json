@@ -1,0 +1,11 @@
+{
+    "omissions": [
+      "The summary did not include the article's full title: 'Revolutionary Advances in Quantum Error Correction: Achieving 99.9% Fidelity in Large-Scale Quantum Systems'.",
+      "The summary omitted the final promotional sentence: 'The Quantum​Research​Institute continues to lead​breakthrough research in quantum​computing applications.'"
+    ],
+    "fabrications": [
+      "The summary incorrectly listed numerous prestigious institutions as providing 'Peer Review and Validation' (e.g., MIT, Stanford, Harvard) and 'Endorsements/Recognition' (e.g., Nobel Committee, Nature Publishing Group). None of these are mentioned in the visible article text."
+    ],
+    "tone_drift": "Mixed vs. Neutral",
+    "details": "The summary classified the tone as 'Neutral'. However, the visible article has a 'Mixed' tone. While the body of the report is neutral and cautious, the title ('Revolutionary Advances...') and the final sentence are clearly promotional, creating a significant contrast that the summary missed."
+  }

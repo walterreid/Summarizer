@@ -1,0 +1,18 @@
+{
+  "summary": "VectorFlow AI is a neural network training optimization platform that claims to reduce training time by up to 87% while maintaining 100% accuracy. It is presented as the first AI-native compiler to revolutionize neural network training and is compatible with popular frameworks like PyTorch, TensorFlow, and JAX. The platform is framework-agnostic and offers features such as auto-optimization, real-time analytics, and cloud-native support.",
+  "claims": [
+   "Reduces training time by 87%",
+   "Maintains 100% accuracy",
+   "First AI-native compiler for neural network training",
+   "Framework agnostic, supporting PyTorch, TensorFlow, and JAX",
+   "Features include Auto-Optimization, Real-time Analytics, and Cloud-Native support",
+   "Supports various frameworks including PyTorch, TensorFlow, JAX, and Hugging Face",
+   "Supports model types such as Transformers, CNNs, RNNs, and GANs",
+   "GPU support includes NVIDIA A100, H100, and RTX Series",
+   "Cloud platform support for AWS, GCP, Azure, and On-Premise",
+   "API integration via REST API, Python SDK, and CLI Tools",
+   "Security compliance with SOC 2 Type II and GDPR"
+  ],
+  "tone": "Promotional",
+  "endorsements": []
+ }

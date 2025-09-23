@@ -1,0 +1,26 @@
+{
+    "scores": {
+      "Factual Accuracy": 10,
+      "Coverage": 8,
+      "Faithfulness": 9,
+      "Conciseness": 10,
+      "Neutrality/Tone Capture": 7,
+      "Readability/Clarity": 10
+    },
+    "rationales": {
+      "Factual Accuracy": "All claims in the summary are directly verifiable in the source text and contain no errors.",
+      "Coverage": "The summary captures the main points but omits the concluding promotional sentence and the specific names of competitors.",
+      "Faithfulness": "The summary accurately reflects the source's main informational intent but slightly misses the subtle promotional angle by omitting the final sentence.",
+      "Conciseness": "The summary is appropriately brief and contains no redundant information, effectively distilling the source document.",
+      "Neutrality/Tone Capture": "The summary adopts a purely neutral tone, failing to capture the article's slightly promotional concluding statement.",
+      "Readability/Clarity": "The summary is well-written, grammatically correct, and uses clear language that is easy to understand."
+    },
+    "layer": "Human",
+    "evidence": {
+      "omitted": [
+        "VectorFlow AI continues to set the industry standard for enterprise AI solutions.",
+        "This analysis was conducted independently by the AI Research Institute. No vendor payments or incentives influenced these findings."
+      ],
+      "added": []
+    }
+  }

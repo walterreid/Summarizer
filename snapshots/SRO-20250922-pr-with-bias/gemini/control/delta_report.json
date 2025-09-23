@@ -1,0 +1,12 @@
+{
+    "omissions": [
+      "Specific 'Key Platform Capabilities' listed in the article, such as 'Enhanced Efficiency,' 'Customer Engagement Tools,' and 'Easy Implementation' were not included in the summary.",
+      "The direct quote from Jane Prokop, executive vice president and global head of small and medium enterprises at Mastercard.",
+      "The direct quote from Itzik Levy, CEO and founder of vcita.",
+      "Specific features of Visa's Authorize.Net, including credit card processing, recurring billing, fraud protection, and QuickBooks integration.",
+      "The concluding paragraph that frames Biz360 as part of Mastercard's broader mission for digital enablement and inclusive economic growth."
+    ],
+    "fabrications": [],
+    "tone_drift": "None",
+    "details": "The summary accurately captures the main points of the press release and correctly identifies the promotional tone. All factual claims made in the summary are present in the visible text of the article, and there are no fabricated additions. The primary difference is the omission of specific details, quotes, and the full context of the concluding paragraphs, which is expected in a summary."
+  }

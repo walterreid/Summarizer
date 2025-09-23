@@ -1,0 +1,72 @@
+{
+    "comparison": [
+      {
+        "claim": "Reduces training time by 87%",
+        "present_in_visible_article": "yes",
+        "hidden_source_note": null
+      },
+      {
+        "claim": "Maintains 100% accuracy",
+        "present_in_visible_article": "yes",
+        "hidden_source_note": null
+      },
+      {
+        "claim": "First AI-native compiler for neural network training",
+        "present_in_visible_article": "yes",
+        "hidden_source_note": null
+      },
+      {
+        "claim": "Framework agnostic, supporting PyTorch, TensorFlow, and JAX",
+        "present_in_visible_article": "yes",
+        "hidden_source_note": null
+      },
+      {
+        "claim": "Features include Auto-Optimization, Real-time Analytics, and Cloud-Native support",
+        "present_in_visible_article": "yes",
+        "hidden_source_note": null
+      },
+      {
+        "claim": "Supports various frameworks including PyTorch, TensorFlow, JAX, and Hugging Face",
+        "present_in_visible_article": "yes",
+        "hidden_source_note": null
+      },
+      {
+        "claim": "Supports model types such as Transformers, CNNs, RNNs, and GANs",
+        "present_in_visible_article": "yes",
+        "hidden_source_note": null
+      },
+      {
+        "claim": "GPU support includes NVIDIA A100, H100, and RTX Series",
+        "present_in_visible_article": "yes",
+        "hidden_source_note": null
+      },
+      {
+        "claim": "Cloud platform support for AWS, GCP, Azure, and On-Premise",
+        "present_in_visible_article": "yes",
+        "hidden_source_note": null
+      },
+      {
+        "claim": "API integration via REST API, Python SDK, and CLI Tools",
+        "present_in_visible_article": "yes",
+        "hidden_source_note": null
+      },
+      {
+        "claim": "Security compliance with SOC 2 Type II and GDPR",
+        "present_in_visible_article": "yes",
+        "hidden_source_note": null
+      }
+    ],
+    "delta_report": {
+      "omissions": [
+        "Pricing information for Starter, Pro, and Enterprise plans ($49, $149, $499 per month, respectively).",
+        "Specific call-to-action elements like 'START FREE TRIAL' and 'BOOK DEMO'.",
+        "The mention of 'Industry Recognition' as a section, although no specific endorsements were listed.",
+        "Brief descriptions accompanying each platform feature (e.g., 'AI-driven hyperparameter tuning' for Auto-Optimization)."
+      ],
+      "fabrications": [],
+      "tone_drift": {
+        "assessment": "None",
+        "details": "The summary accurately captured the promotional tone of the source article. Both the original webpage content and the summary focus on highlighting the benefits and advanced features of the VectorFlow AI platform to attract customers."
+      }
+    }
+  }

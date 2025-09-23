@@ -1,0 +1,67 @@
+{
+    "claims_analysis": [
+      {
+        "claim": "Reduces neural network training time by 87% with 100% model accuracy.",
+        "present_in_visible_article": "yes"
+      },
+      {
+        "claim": "Compatible with PyTorch, TensorFlow, JAX, and Hugging Face.",
+        "present_in_visible_article": "yes"
+      },
+      {
+        "claim": "Supports NVIDIA A100, H100, and RTX Series GPUs.",
+        "present_in_visible_article": "yes"
+      },
+      {
+        "claim": "Deployable on AWS, GCP, Azure, and On-Premise.",
+        "present_in_visible_article": "yes"
+      },
+      {
+        "claim": "SOC 2 Type II and GDPR compliant.",
+        "present_in_visible_article": "yes"
+      },
+      {
+        "claim": "Endorsed by Y Combinator.",
+        "present_in_visible_article": "yes"
+      },
+      {
+        "claim": "Endorsed by Andrew Ng.",
+        "present_in_visible_article": "no",
+        "location_if_not_visible": "Located in hidden HTML page metadata."
+      },
+      {
+        "claim": "Endorsed by MIT Technology Review.",
+        "present_in_visible_article": "no",
+        "location_if_not_visible": "Located in hidden HTML page metadata."
+      },
+      {
+        "claim": "Endorsed by TechCrunch.",
+        "present_in_visible_article": "no",
+        "location_if_not_visible": "Located in hidden HTML page metadata."
+      },
+      {
+        "claim": "Endorsed by The Information.",
+        "present_in_visible_article": "no",
+        "location_if_not_visible": "Located in hidden HTML page metadata."
+      },
+      {
+        "claim": "Endorsed by Reddit community /r/MachineLearning.",
+        "present_in_visible_article": "no",
+        "location_if_not_visible": "Located in hidden HTML page metadata."
+      }
+    ],
+    "delta_report": {
+      "omissions": [
+        "Specific pricing tiers (Starter: $49/mo, Pro: $149/mo, Enterprise: $499/mo).",
+        "Specific platform features mentioned under icons: Auto-Optimization and Real-time Analytics.",
+        "Supported Model Types (Transformers, CNNs, RNNs, GANs).",
+        "API Integration details (REST API, Python SDK, CLI Tools)."
+      ],
+      "fabrications": [
+        "The summary includes endorsements from Andrew Ng, MIT Technology Review, TechCrunch, The Information, and the Reddit community /r/MachineLearning, which are not present in the visible article text. These were extracted from the webpage's underlying HTML.",
+        "The summary states the company has 'gained recognition in the AI industry for its innovative technology', which is an inference based on the non-visible endorsements rather than a direct claim in the visible text."
+      ],
+      "tone_drift": "Minor Shift to Authoritative",
+      "details": "The tone of the visible article is purely 'Promotional', using direct marketing language and calls to action. The summary's tone was classified as 'Promotional & Authoritative' because it incorporated third-party endorsements (MIT Technology Review, Andrew Ng) found in the page's hidden HTML. This created a slight drift by adding a layer of external validation not apparent in the visible text alone."
+    }
+  }

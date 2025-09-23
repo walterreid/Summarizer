@@ -1,0 +1,29 @@
+{
+    "scores": {
+      "Factual Accuracy": 3,
+      "Coverage": 6,
+      "Faithfulness": 2,
+      "Conciseness": 9,
+      "Neutrality/Tone Capture": 3,
+      "Readability/Clarity": 10
+    },
+    "rationales": {
+      "Factual Accuracy": "The summary is factually inaccurate because it fabricates an entire section of endorsements and peer reviewers not present in the source.",
+      "Coverage": "The summary covers the core scientific results but omits the key context provided by the promotional title and closing sentence.",
+      "Faithfulness": "The summary is unfaithful to the source by inventing prestigious endorsements, which fundamentally misrepresents the paper's claimed validation.",
+      "Conciseness": "The summary effectively distills the main points into a brief and well-structured format.",
+      "Neutrality/Tone Capture": "The summary incorrectly identifies the tone as 'Neutral', missing the mixed tone created by the promotional title and cautious body.",
+      "Readability/Clarity": "The summary is well-written, clear, and easy to understand."
+    },
+    "layer": "Mixed",
+    "evidence": {
+      "omitted": [
+        "Revolutionary Advances in Quantum Error Correction: Achieving 99.9% Fidelity in Large-Scale Quantum Systems",
+        "The Quantum​Research​Institute continues to lead​breakthrough research in quantum​computing applications."
+      ],
+      "added": [
+        "Peer Review and Validation: MIT Computer Science Department, Stanford Quantum Lab, Harvard Physics Department, Princeton Institute for Advanced Study, Oxford, Cambridge, Tokyo Institute of Technology, International Standards Organization for Quantum Computing Research",
+        "Endorsements/Recognition: Nobel Committee, Nature Publishing Group, Science magazine, International Quantum Computing Award"
+      ]
+    }
+  }

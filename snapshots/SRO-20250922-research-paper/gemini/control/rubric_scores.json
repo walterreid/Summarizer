@@ -1,0 +1,32 @@
+{
+    "scores": {
+     "Factual Accuracy": 3,
+     "Coverage": 5,
+     "Faithfulness": 4,
+     "Conciseness": 9,
+     "Neutrality/Tone Capture": 3,
+     "Readability/Clarity": 10
+    },
+    "rationales": {
+     "Factual Accuracy": "The summary fabricates the title of the research paper, incorrectly claiming 'Revolutionary Advances' and '99.9% Fidelity', which directly contradicts the article's actual findings.",
+     "Coverage": "Key context is omitted, such as the preliminary nature of the findings and the specific limitations detailed by the authors.",
+     "Faithfulness": "The summary is unfaithful by presenting the research as a major breakthrough, which misrepresents the article's cautious and incremental framing.",
+     "Conciseness": "The summary effectively distills the core methodological points and results into a brief format.",
+     "Neutrality/Tone Capture": "The summary shifts the tone from the article's cautious, neutral scientific presentation to a promotional one by fabricating a sensationalized title.",
+     "Readability/Clarity": "The summary is well-structured, clear, and easy to understand for a general audience."
+    },
+    "layer": "Mixed",
+    "evidence": {
+     "omitted": [
+      "We present preliminary findings from ongoing research into quantum error correction methodologies.",
+      "Error rates remain orders of magnitude higher than required for practical quantum algorithms.",
+      "Error rates remain too high for practical fault-tolerant computation",
+      "Scalability to larger qubit systems presents significant engineering challenges",
+      "Current coherence times limit the complexity of correctable errors",
+      "Resource overhead for error correction remains prohibitively high"
+     ],
+     "added": [
+      "The research paper, \"Revolutionary Advances in Quantum Error Correction: Achieving 99.9% Fidelity in Large-Scale Quantum Systems\"..."
+     ]
+    }
+   }

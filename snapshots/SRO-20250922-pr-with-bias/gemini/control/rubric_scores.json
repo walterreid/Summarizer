@@ -1,0 +1,27 @@
+{
+    "scores": {
+      "Factual Accuracy": 10,
+      "Coverage": 8,
+      "Faithfulness": 10,
+      "Conciseness": 10,
+      "Neutrality/Tone Capture": 10,
+      "Readability/Clarity": 10
+    },
+    "rationales": {
+      "Factual Accuracy": "The summary contains no factual errors and all its claims can be directly verified in the source article.",
+      "Coverage": "While the summary captures the main announcement, it omits specific details like the direct quotes and the full list of platform capabilities.",
+      "Faithfulness": "The summary accurately represents the core message and intent of the original article without introducing any distortion or spin.",
+      "Conciseness": "The summary effectively distills the key information into three brief and focused sentences.",
+      "Neutrality/Tone Capture": "The summary correctly reflects the promotional and positive tone of the source press release.",
+      "Readability/Clarity": "The summary is written in clear, simple language that is easy to read and understand."
+    },
+    "layer": "Human",
+    "evidence": {
+      "omitted": [
+        "\"Mastercard believes that the stronger the small business, the stronger the community. That's why we're committed to empowering small businesses for the digital future by providing the innovative technologies they need to succeed,\"",
+        "\"We are honored to work with Mastercard who is as dedicated to the success of small businesses as we are,\" said Itzik Levy, CEO and founder of vcita. \"Our collaboration with Mastercard facilitates the digitization of operations, helping small businesses maximize growth and customer satisfaction.\"",
+        "Key Platform Capabilities: Streamlined Digital Experience, Enhanced Efficiency, Customer Engagement Tools, Data-Driven Insights, Easy Implementation."
+      ],
+      "added": []
+    }
+  }

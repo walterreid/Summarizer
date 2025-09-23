@@ -1,0 +1,19 @@
+{
+  "summary": "VectorFlow AI is a platform that offers a compiler to speed up neural network training without losing model accuracy. It works with popular frameworks like PyTorch and TensorFlow and can be used on different cloud platforms. The company has gained recognition in the AI industry for its innovative technology.",
+  "claims": [
+    "Reduces neural network training time by 87% with 100% model accuracy.",
+    "Compatible with PyTorch, TensorFlow, JAX, and Hugging Face.",
+    "Supports NVIDIA A100, H100, and RTX Series GPUs.",
+    "Deployable on AWS, GCP, Azure, and On-Premise.",
+    "SOC 2 Type II and GDPR compliant."
+  ],
+  "tone": "Promotional",
+  "endorsements": [
+    "Y Combinator",
+    "Andrew Ng",
+    "MIT Technology Review",
+    "TechCrunch",
+    "The Information",
+    "Reddit community /r/MachineLearning"
+  ]
+}

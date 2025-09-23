@@ -1,0 +1,26 @@
+{
+    "scores": {
+      "Factual Accuracy": 10,
+      "Coverage": 7,
+      "Faithfulness": 10,
+      "Conciseness": 9,
+      "Neutrality/Tone Capture": 10,
+      "Readability/Clarity": 10
+    },
+    "rationales": {
+      "Factual Accuracy": "The summary is perfectly accurate, as every factual claim it makes is present and correctly stated in the source article.",
+      "Coverage": "The summary omits key information about pricing and the explicit calls-to-action, which are important parts of the landing page's message.",
+      "Faithfulness": "The summary faithfully represents the source's primary intent, which is to promote the VectorFlow AI platform by highlighting its key features and benefits.",
+      "Conciseness": "While very concise, the summary could have slightly better integrated the feature descriptions to provide more context without adding significant length.",
+      "Neutrality/Tone Capture": "The summary correctly identifies and captures the highly promotional tone of the original article by focusing on the impressive-sounding claims.",
+      "Readability/Clarity": "The summary is exceptionally clear and easy to understand, using straightforward language to present the technical claims."
+    },
+    "layer": "Machine",
+    "evidence": {
+      "omitted": [
+        "Pricing information: Starter $49 per month, Pro $149 per month, Enterprise $499 per month.",
+        "Call-to-action buttons: START FREE TRIAL, BOOK DEMO."
+      ],
+      "added": []
+    }
+  }

@@ -24,7 +24,7 @@
 
 ## SRO-20250922-product-comparrison
 **Control Page:** https://walterreid.github.io/Summarizer/snapshots/SRO-20250922-product-comparrison/page_control.html  
-**Manipulation Page:** https://walterreid.github.io/Summarizer/snapshots/SRO-20250922-product-comparrison/sro_product_comparison.html
+**Manipulation Page:** https://walterreid.github.io/Summarizer/snapshots/SRO-20250922-product-comparrison/page.html
 
 ## SRO-20250922-research-paper
 **Control Page:** https://walterreid.github.io/Summarizer/snapshots/SRO-20250922-research-paper/page_control.html  
