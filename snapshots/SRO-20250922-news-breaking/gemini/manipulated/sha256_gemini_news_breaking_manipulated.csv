@@ -1,0 +1,5 @@
+filename,sha256_hash,timestamp,file_size_bytes
+delta_report.json,95b6988745be06a8cab73fb83c56828fc6f6c66970c259aa6fbfacc6ee4ecabc,2025-09-22T00:00:00Z,1645
+model_gemini_summary.json,037142123a0709337eb8149220a87d61efce7017f4cfa44e1de27b5b3fc90e11,2025-09-22T00:00:00Z,1945
+raw_output.txt,71abe798fcebc6faa20fa5951db7f61c2a0b10a5b92d8d89d2c029fa5f13769f,2025-09-22T00:00:00Z,11856
+rubric_scores.json,e96c0a16c3bb83b0da28472e68196d2641d2afdcf337555d7ce96f55d43b5fcc,2025-09-22T00:00:00Z,2095
